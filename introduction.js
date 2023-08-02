@@ -1,27 +1,30 @@
-const sumArray6 = (five) => {
-  let result = 0;
-  //loop
-  for (const Fivest of five) {
-    console.log(Fivest);
-    result = five + Fivest;
-  }
-  return { five };
-};
-const sums = [2, 4, 5, 6, 7, 8, 9, 2];
-console.log(sumArray6(sums));
+let results = [1, 2, 3, 4].map((number) => number * 2);
+console.log(results);
 
-const max = (nevo) => {
-  let result = nevo[0];
-  //loop
-  for (const nevp of nevo) {
-    if (nevp > result) {
-      result = nevo;
+const filter = (numbers, greaterThan) => {
+  let result = [];
+  for (const number of numbers) {
+    if (number > greaterThan) {
+      result.push(number);
     }
   }
-  return { result };
+  return result;
 };
-console.log(max([1, 2, 3, 4, 5, 6, 7]));
+console.log(filter([1, 2, 3, 4, 5, 6], 2));
 
-const letterFrequency3 = (phrase) => {
-  console;
-};
+const actors = [
+  {
+    Name: "emma",
+    net: "77777",
+    Name: "emma",
+    net: "77777",
+    Name: "emma",
+    net: "77777",
+    Name: "emma",
+    net: "77777",
+
+    Name: "emma",
+    net: "77777",
+  },
+];
+console.log(actors.filter((actors) => actors.net > 10));

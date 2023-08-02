@@ -249,15 +249,37 @@ const letterFrequency = (phrase) => {
   console.log(phrase);
   //make frequency object{}
   let frequency = {};
-  for (const nn of phrase) {
+  for (const letter of phrase) {
     //check if letter exists in frequency
     if (letter in frequency) {
-      frequency[letter] = frequency[letter] + 1;
+      frequency[letter] = +1;
       //otherwise, set the value to 1
     } else {
       frequency[letter] = 1;
     }
-    return frequency;
   }
+  return frequency;
 };
-console.log(letterFrequency("haha"));
+//console.log(letterFrequency("haharohahahahahahahahahahahahahah"));
+
+const wordFrequency = (phrase) => {
+  let frequency = {};
+  words = phrase.split("");
+  for (const word of words) {
+    console.log(word);
+
+    if (word in frequency) {
+      frequency[word] += 1;
+    } else {
+      frequency[word] = 1;
+    }
+  }
+
+  return frequency;
+
+  return letterFrequency(words);
+};
+const userInput = prompt("write your sentences");
+console.log(wordFrequency(userInput));
+
+
